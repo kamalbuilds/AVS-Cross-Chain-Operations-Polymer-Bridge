@@ -1,3 +1,15 @@
+## Polymer Cross-Chain Operations Bridge using AVS
+
+Check if the packet got through on the Polymer IBC explorer https://sepolia.polymer.zone/packets 
+
+### Key Changes
+
+1. **Inheritance from `UniversalChanIbcApp`**: The `CrossChainMultisig` contract now inherits from `UniversalChanIbcApp`.
+2. **Constructor**: The constructor now accepts an additional `_middleware` parameter for the `UniversalChanIbcApp` initialization.
+3. **IBC Methods**: Added methods `crosschainConfirmTransaction`, `onRecvUniversalPacket`, `onUniversalAcknowledgement`, and `onTimeoutUniversalPacket` to handle cross-chain communication.
+4. **Confirmation and Execution**: Updated the confirmation logic to handle cross-chain confirmations using IBC.
+
+
 # ⛓️🔗⛓️ Template for IBC enabled Solidity contracts
 
 This repo provides a starter project to build [IBC](https://github.com/cosmos/ibc) enabled Solidity contracts that connect rollups to one another Polymer Hub, through the [vIBC core contracts](https://github.com/open-ibc/vibc-core-smart-contracts).
